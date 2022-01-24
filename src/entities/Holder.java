@@ -6,14 +6,18 @@ public class Holder {
 	private static String holder;
 	private static double balance;
 	private static double initialDeposit;
-
+    
 	public Holder(int number2, String holder2, double initialDeposit2) {
+
 	}
 
 	public Holder(int number2, String holder2) {
-
+		// TODO Auto-generated constructor stub
 	}
 
+	public void accountHolder() {
+	}
+	
 	public void accountHolder(int number, String holder) {
 		Holder.number = number;
 		Holder.holder = holder;
@@ -22,7 +26,7 @@ public class Holder {
 	public void accountHolder(int number, String holder, double initialDeposit) {
 		Holder.number = number;
 		Holder.holder = holder;
-		deposit(100000.00);
+		deposit(initialDeposit);
 
 	}
 
@@ -51,7 +55,8 @@ public class Holder {
 	}
 
 	public static double setInitialDeposit(double initialDeposit) {
-		return initialDeposit;
+		balance += initialDeposit;
+		return balance;
 	}
 
 	public static void deposit(double theAmount) {
@@ -71,4 +76,5 @@ public class Holder {
 			   + "Current account balance: R$ " 
 	           + String.format("%.2f\n ", balance);
 	}
+
 }
